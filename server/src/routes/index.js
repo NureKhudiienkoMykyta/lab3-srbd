@@ -13,7 +13,7 @@ const router = Router();
 router.use("/departments", departmentRouter);
 router.use("/groups", groupRouter);
 router.use("/marks", marksRouter);
-router.use("/marks/log", marksLogRouter);
+router.use("/markslog", marksLogRouter);
 router.use("/students", studentRouter);
 router.use("/subjects", subjectRouter);
 router.use("/teachers", teacherRouter);
