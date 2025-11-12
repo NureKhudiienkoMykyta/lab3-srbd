@@ -9,6 +9,8 @@ import StudentsByGroup from "./pages/StudentsByGroup/StudentsByGroup";
 import MarksByStudent from "./pages/MarksByStudent/MarksByStudent";
 import StudentsLog from "./pages/StudentsLog/StudentsLog";
 import AddMark from "./pages/AddMark/AddMark";
+import CountStudentsRegion from "./pages/ScalarFunctions/CountStudentsRegion";
+import EverySeconderyStudent from "./pages/TableFunctios/EverySeconderyStudent";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,8 @@ const router = createBrowserRouter([
       { path: "table/marks/by-student", element: <MarksByStudent /> },
       { path: "table/studentslog", element: <StudentsLog /> },
       { path: "procedures/addMark", element: <AddMark /> },
+      { path: "functions/scalar/region", element: <CountStudentsRegion /> },
+      { path: "functions/table/mark", element: <EverySeconderyStudent /> },
     ],
   },
 ]);

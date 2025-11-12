@@ -61,10 +61,10 @@ function Sidebar() {
           <div className={styles.sectionTitle}>Функції</div>
           <ul className={styles.sectionList}>
             <li>
-              <Link to="/functions/countProducts">CountProductsInCategory</Link>
+              <Link to="/functions/scalar/region">CountStudentsInRegion</Link>
             </li>
             <li>
-              <Link to="/functions/topSelling">GetTopSellingProducts</Link>
+              <Link to="/functions/table/mark">GetStudentsAvgMark</Link>
             </li>
           </ul>
         </div>
