@@ -74,7 +74,7 @@ export const insertMarkProcedure = async (req, res) => {
       .input("MarkDate", sql.Date, markDate)
       .execute("usr_ins_mark");
 
-    res.status(200).json({ message: "Mark add or update" });
+    res.status(200).json({ message: "Success: Mark add or update" });
   } catch (error) {
     console.error(error);
     res.status(400).json({ message: error.message });

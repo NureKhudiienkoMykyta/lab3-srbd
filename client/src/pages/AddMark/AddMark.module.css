@@ -1,0 +1,44 @@
+.title {
+    color: black;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+    border-top: 2px solid black;
+}
+
+.label {
+    font-size: 24px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.input {
+    font-size: 20px;
+}
+
+.buttonBlock {
+    display: flex;
+    width: 50%;
+    justify-content: end;
+}
+
+.btn {
+    background-color: green;
+}
+
+.sucMessage{
+    margin-top: 20px;
+    color: green;
+    font-size: 28px;
+}
+
+.errorMessage {
+    margin-top: 20px;
+    color: red;
+    font-size: 28px;
+}

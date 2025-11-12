@@ -51,10 +51,7 @@ function Sidebar() {
           <div className={styles.sectionTitle}>Процедури</div>
           <ul className={styles.sectionList}>
             <li>
-              <Link to="/procedures/addProduct">AddProduct</Link>
-            </li>
-            <li>
-              <Link to="/procedures/deleteSale">DeleteSale</Link>
+              <Link to="/procedures/addMark">AddMark</Link>
             </li>
           </ul>
         </div>

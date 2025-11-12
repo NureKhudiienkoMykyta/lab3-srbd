@@ -8,6 +8,7 @@ import TablePage from "./pages/TablePage/TablePage";
 import StudentsByGroup from "./pages/StudentsByGroup/StudentsByGroup";
 import MarksByStudent from "./pages/MarksByStudent/MarksByStudent";
 import StudentsLog from "./pages/StudentsLog/StudentsLog";
+import AddMark from "./pages/AddMark/AddMark";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "table/students/by-group", element: <StudentsByGroup /> },
       { path: "table/marks/by-student", element: <MarksByStudent /> },
       { path: "table/studentslog", element: <StudentsLog /> },
+      { path: "procedures/addMark", element: <AddMark /> },
     ],
   },
 ]);
