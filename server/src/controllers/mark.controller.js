@@ -1,4 +1,5 @@
 import { connectToDB } from "../config/db.js";
+import sql from "mssql";
 
 export const getAll = async (req, res) => {
   try {
@@ -48,5 +49,34 @@ export const getMarksByStudentId = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error get marks by students id" });
+  }
+};
+
+export const insertMarkProcedure = async (req, res) => {
+  try {
+    const { studentId, subjectId, mark, assessmentType, markDate } = req.body;
+
+    if (!studentId || !subjectId || !mark || !assessmentType || !markDate) {
+      return res.status(400).json({
+        message:
+          "Fields studentId, subjectId, mark, assessmentType and markDate are required.",
+      });
+    }
+
+    const pool = await connectToDB();
+
+    const result = await pool
+      .request()
+      .input("StudentId", sql.Int, studentId)
+      .input("SubjectId", sql.Int, subjectId)
+      .input("Mark", sql.Int, mark)
+      .input("AssessmentType", sql.VarChar(50), assessmentType)
+      .input("MarkDate", sql.Date, markDate)
+      .execute("usr_ins_mark");
+
+    res.status(200).json({ message: "Mark add or update" });
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ message: error.message });
   }
 };
